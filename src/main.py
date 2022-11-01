@@ -6,6 +6,15 @@ root.title('Criss-cross')
 game_run = True
 field = []
 cross_count = 0
+def new_game():
+    for row in range(3):
+        for col in range(3):
+            field[row][col]['text'] = ' '
+            field[row][col]['background'] = 'lavender'
+    global game_run
+    game_run = True
+    global cross_count
+    cross_count = 0
 
 for row in range(3):
     line = []
