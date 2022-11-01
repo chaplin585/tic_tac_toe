@@ -14,26 +14,13 @@ TEST2 = test/test2.py
 
 
 
-$(TARGET): $(SRC)$(CW) $(SRC)$(CL)	
+$(TARGET): $(SRC)$(CW) $(SRC)$(CL) $(SRC)$(CHW)	$(SRC)$(C) $(SRC)$(CM)
 	$(PY) $(SRC)$(CW)
 	$(PY) $(SRC)$(CL)
-
-
-CAN_WIN: $(SRC)$(CW)
-	$(PY) $(SRC)$(CW)
-CL: $(SRC)$(CL)
-	$(PY) $(SRC)$(CL)
-CHW:$(SRC)$(CHW)
 	$(PY) $(SRC)$(CHW)
-C:$(SRC)$(C)
 	$(PY) $(SRC)$(C)
-CM:$(SRC)$(CM)
 	$(PY) $(SRC)$(CM)
 	
-
-
-
-
 test:  $(TEST1) $(TEST2)
 	$(PY) $(TEST1)
 	$(PY) $(TEST2)  
