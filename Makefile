@@ -15,12 +15,15 @@ TEST2 = test/test2.py
 
 
 $(TARGET): $(SRC)$(CW) $(SRC)$(CL) $(SRC)$(CHW)	$(SRC)$(C) $(SRC)$(CM)
-	$(PY) $(SRC)$(CW)
+	$(PY) $(SRC)$(CW)	
 	$(PY) $(SRC)$(CL)
 	$(PY) $(SRC)$(CHW)
 	$(PY) $(SRC)$(C)
 	$(PY) $(SRC)$(CM)
-	
+
+
+
+
 test:  $(TEST1) $(TEST2)
 	$(PY) $(TEST1)
 	$(PY) $(TEST2)  
